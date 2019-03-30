@@ -13,10 +13,10 @@ def is_prime(number):
 
 
 # Inicio del programa
-input = int(input("Digite un numero: "))
+input = int(input("Digit a number: "))
 result = is_prime(input)
 
 if result == True:
-    print('Es primo')
+    print('Is a prime number')
 else:
-    print('No es primo')
+    print('Is NOT a prime number')
