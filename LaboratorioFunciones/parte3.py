@@ -12,6 +12,7 @@ def is_prime(number):
     return 1
 
 # Inicio del programa
+counter = 0
 while True:
     try:
         inputNumber = int(input("Digit a number: "))
@@ -20,7 +21,17 @@ while True:
             break
 
         result = is_prime(inputNumber)
+        counter = counter + 1
     except:
         result = -1
 
     print "Result: ", result
+
+
+print "Finish Execution"
+
+print "Counter: ", counter
+if is_prime(counter):
+    print("Is prime")
+else:
+    print("Is NOT prime")
