@@ -1,22 +1,26 @@
 def is_prime(number):
     if number < 1:
-        return False
+        return 0
 
     if number == 2:
-        return True
+        return 1
 
     for n in range(2, number):
         if number % n == 0:
-            return False
+            return 0
 
-    return True
-
+    return 1
 
 # Inicio del programa
-input = int(input("Digit a number: "))
-result = is_prime(input)
+while True:
+    try:
+        inputNumber = int(input("Digit a number: "))
 
-if result == True:
-    print('Is a prime number')
-else:
-    print('Is NOT a prime number')
+        if inputNumber == 0:
+            break
+
+        result = is_prime(inputNumber)
+    except:
+        result = -1
+
+    print "Result: ", result
